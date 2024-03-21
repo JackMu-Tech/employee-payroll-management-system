@@ -1,0 +1,11 @@
+<!-- leave/templates/leave/leave_types.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Leave Types</h1>
+<ul>
+  {% for leave_type in leave_types %}
+    <li>{{ leave_type.name }} - {{ leave_type.description }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

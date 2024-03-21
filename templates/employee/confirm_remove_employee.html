@@ -1,0 +1,14 @@
+<!-- templates/confirm_remove_employee.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Confirm Remove Employee{% endblock %}
+
+{% block content %}
+    <h2>Confirm Remove Employee</h2>
+    <p>Are you sure you want to remove {{ employee.name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes</button>
+    </form>
+{% endblock %}

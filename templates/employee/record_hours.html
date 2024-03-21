@@ -1,0 +1,14 @@
+<!-- templates/record_hours.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Record Hours{% endblock %}
+
+{% block content %}
+    <h2>Record Hours</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

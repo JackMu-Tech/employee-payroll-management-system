@@ -1,0 +1,15 @@
+<!-- templates/confirm_promote_employee.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Confirm Promote Employee{% endblock %}
+
+{% block content %}
+    <h2>Confirm Promote Employee</h2>
+    <p>Are you sure you want to promote {{ employee.name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes</button>
+    </form>
+{% endblock %}
+s

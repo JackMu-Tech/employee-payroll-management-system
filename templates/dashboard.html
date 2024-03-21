@@ -1,0 +1,31 @@
+<!-- dashboard.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Employee Payroll Management System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">Dashboard</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Employee Management</h5>
+                    <p class="card-text">Manage employee records, including adding, editing, and deleting employees.</p>
+                    <a href="{% url 'employee_list' %}" class="btn btn-primary">View Employees</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Payroll Management</h5>
+                    <p class="card-text">Manage payroll processing, including salary calculation, reports, and settings.</p>
+                    <a href="{% url 'payroll_summary' %}" class="btn btn-primary">View Payroll</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

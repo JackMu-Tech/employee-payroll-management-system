@@ -1,0 +1,14 @@
+<!-- templates/edit_hours.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Edit Hours{% endblock %}
+
+{% block content %}
+    <h2>Edit Hours</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}

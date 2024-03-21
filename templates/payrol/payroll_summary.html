@@ -1,0 +1,42 @@
+<!-- payroll_summary.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Payroll Summary - Employee Payroll Management System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">Payroll Summary</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Payroll Period: {{ payroll_period }}</h5>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Position</th>
+                                <th>Salary</th>
+                                <th>Deductions</th>
+                                <th>Net Pay</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for employee in employees %}
+                            <tr>
+                                <td>{{ employee.name }}</td>
+                                <td>{{ employee.position }}</td>
+                                <td>${{ employee.salary }}</td>
+                                <td>${{ employee.deductions }}</td>
+                                <td>${{ employee.net_pay }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

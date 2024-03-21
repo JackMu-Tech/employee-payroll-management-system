@@ -1,0 +1,22 @@
+<!-- home.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Home - Employee Payroll Management System{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Welcome to Employee Payroll Management System</h1>
+        <p class="lead">This is a robust system to manage employee information and payroll processing.</p>
+        <hr class="my-4">
+        <p>Features include:</p>
+        <ul>
+            <li>Employee management: Add, edit, and delete employee records.</li>
+            <li>Payroll processing: Calculate salaries, generate reports, and manage payroll settings.</li>
+            <!-- Add more features as needed -->
+        </ul>
+        <a class="btn btn-primary btn-lg" href="{% url 'employee_list' %}" role="button">Get Started</a>
+    </div>
+</div>
+{% endblock %}
